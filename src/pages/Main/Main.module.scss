@@ -1,0 +1,151 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$barHeight: 60px;
+
+.root {
+  height: 100vh;
+  background-color: $primary-light-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include md {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.page {
+  display: flex;
+  height: 100vh;
+
+  @include md {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.bar {
+  display: none; // flex
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: $spacing-xs $spacing-l;
+  height: $barHeight;
+  transition: transform 0.4s ease-out;
+  -webkit-transition: transform 0.4s ease-out;
+
+  @include md {
+    display: flex;
+  }
+
+  @include sm {
+    padding: $spacing-xs $spacing-m;
+  }
+}
+
+.barMoved {
+  @include md {
+    transform: translateX(-320px);
+    -webkit-transform: translateX(-320px);
+  }
+
+  @include sm {
+    transform: translateX(-240px);
+    -webkit-transform: translateX(-240px);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: $spacing-l;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include md {
+    padding-top: calc(#{$barHeight} + #{$spacing-l});
+  }
+
+  @include sm {
+    padding-right: $spacing-m;
+    padding-left: $spacing-m;
+  }
+}
+
+.profile {
+  position: relative;
+  z-index: 4;
+  width: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 0 $spacing-m $primary-dark-color;
+
+  @include md {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    -webkit-transition: transform 0.4s ease-out;
+  }
+
+  @include sm {
+    width: 240px;
+  }
+}
+
+.profileVisible {
+  @include md {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loaderText {
+  margin-bottom: $spacing-m;
+}
+
+.mobileMenu {
+  position: relative;
+  z-index: 3;
+  display: none; // flex
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-xs $spacing-l;
+
+  @include sm {
+    padding: $spacing-xs $spacing-m;
+  }
+
+  @include md {
+    display: flex;
+  }
+}
+
+.stravaImage {
+  height: 100%;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+}

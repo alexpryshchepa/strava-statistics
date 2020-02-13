@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.root {
+}
+
+.return {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-m;
+}
+
+.returnButton {
+  margin-right: $spacing-s;
+  margin-left: -#{$spacing-s};
+}
+
+.base {
+  margin-bottom: $spacing-l;
+}
+
+.row {
+  margin-bottom: $spacing-l;
+}
+
+.title {
+  margin-bottom: $spacing-m;
+}

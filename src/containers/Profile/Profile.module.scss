@@ -1,0 +1,47 @@
+@import 'styles/variables';
+
+.root {
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $spacing-m;
+}
+
+.avatar {
+  margin-bottom: $spacing-m;
+}
+
+.name {
+  margin-bottom: $spacing-s;
+}
+
+.logout {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-s $spacing-m;
+  margin-bottom: $spacing-m;
+}
+
+.logoutButton {
+  position: relative;
+  margin-right: -#{$spacing-s};
+}
+
+.logoutLoader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}

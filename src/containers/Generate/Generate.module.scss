@@ -1,0 +1,51 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.root {
+  position: relative;
+  min-height: 100%;
+}
+
+.head {
+  margin-bottom: $spacing-l;
+}
+
+.title {
+  margin-bottom: $spacing-s;
+}
+
+.row {
+  width: fit-content;
+  margin-bottom: $spacing-l;
+}
+
+.container {
+  padding: $spacing-l;
+
+  @include sm {
+    padding: $spacing-m;
+  }
+}
+
+.button {
+  display: inline-block;
+}
+
+.waiting {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.waitingText {
+  margin-bottom: $spacing-m;
+}

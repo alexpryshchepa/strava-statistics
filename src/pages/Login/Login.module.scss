@@ -1,0 +1,17 @@
+@import 'styles/variables.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 24px;
+  background-color: $primary-light-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.title {
+  margin-bottom: $spacing-m;
+}

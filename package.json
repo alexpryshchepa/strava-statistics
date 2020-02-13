@@ -1,0 +1,80 @@
+{
+  "name": "strava",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "^1.3.13",
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.39",
+    "@material-ui/pickers": "^3.2.9",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/dom-to-image": "^2.6.0",
+    "@types/downloadjs": "^1.4.1",
+    "@types/jest": "^24.0.25",
+    "@types/js-cookie": "^2.2.4",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.3",
+    "animate.css": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "cookie-parser": "^1.4.4",
+    "dom-to-image": "^2.6.0",
+    "dotenv": "^8.2.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "express": "^4.17.1",
+    "fp-ts": "^2.4.1",
+    "gsap": "^3.1.1",
+    "io-ts": "^2.0.5",
+    "io-ts-types": "^0.5.5",
+    "js-cookie": "^2.2.1",
+    "local-storage": "^2.0.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.0",
+    "query-string": "^6.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "typescript": "^3.7.4"
+  },
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"nodemon server.js\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "proxy": "http://localhost:8080"
+}

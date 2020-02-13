@@ -1,0 +1,25 @@
+@import './variables';
+
+@mixin xs {
+  @media (max-width: #{$sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$md - 1px}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
