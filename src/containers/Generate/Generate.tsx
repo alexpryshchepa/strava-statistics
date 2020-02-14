@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import cookie from 'js-cookie';
-import { getTimestampInSecs } from 'utils';
+import { getTimestampInSecs, isDateInRange, resetDateTime } from 'utils';
 import { getActivities } from 'api';
 import AppContext, { Context } from 'store';
 import {
@@ -23,7 +23,6 @@ import generateStats, { persist } from 'services/statistics';
 import { none, fold, some, isSome } from 'fp-ts/lib/Option';
 import { pipe } from 'fp-ts/lib/pipeable';
 import { TimelineLite } from 'gsap';
-import { isValidDate } from 'utils';
 import Button from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
@@ -69,8 +68,11 @@ const Statistic: React.FC<Props> = ({ history, info }) => {
   const isActivitiesLoading = state.user.activities.loading;
   const isGenerationAllowed =
     (isActivity !== '' || isAll) &&
-    isValidDate(dateFrom) &&
-    isValidDate(dateTo);
+    isDateInRange(dateFrom, [
+      resetDateTime(new Date(info.created_at)),
+      dateTo,
+    ]) &&
+    isDateInRange(dateTo, [dateFrom, new Date()]);
 
   const refHead = useRef(null);
   const refPickers = useRef(null);
